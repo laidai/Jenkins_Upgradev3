@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('Build Application') {
             steps {
-                sh 'export MAVEN_HOME = /usr/local/Cellar/maven/3.6.3_1/libexec'
                 sh 'mvn -f java-tomcat-sample/pom.xml clean package'
             }
             post {
